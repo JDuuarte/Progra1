@@ -4,7 +4,6 @@ import random
 # if cantidad_contraseña[0] == "-" or (cantidad_contraseña[0] >= 0 and cantidad_contraseña[0] <= 9)
         # print("ingresaste un valor incorrecto")
 
-
 def extencion_contraseña():
 
     longitud_contraseña = random.randint(8,16)
@@ -34,16 +33,24 @@ def extencion_contraseña():
 def generar_contraseña():
     cantidad_contraseña = int(input("¿Cuántas contaseñas queres generar?: "))
     Lista_vacia = []
-    
+
     while cantidad_contraseña > 0:
-        
-        cantidad_contraseña -= 1
 
+        repetida = False
         password = extencion_contraseña()
-        Lista_vacia += [password]
+        
+        for i in Lista_vacia:
+            if i == password:
+                print("Contraseña existente, volviendo a generar una nueva")
+                repetida = True
+                break
 
-    for i in Lista_vacia:
-        print(i)
+        if repetida == False:
+            Lista_vacia += [password]
+            cantidad_contraseña -= 1
+            
+    for j in Lista_vacia:
+        print(j)
 
 def seleccionar_menu():
     print("=========== MENU ===========\n")
