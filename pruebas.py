@@ -50,8 +50,6 @@ def generar_contraseña():
     for j in Lista_vacia:
         print(j)
     return Lista_vacia    
-# generar_contraseña()
-# extencion_contraseña()
 
 lista_contraseñas_generadas = generar_contraseña()
 
@@ -100,4 +98,58 @@ def lista_porcentajes(lista):
         print(f"{m} caracteres: {((l * 100)/contador_estadisticas)}%")
         m += 1
 
-lista_porcentajes(lista_contraseñas_generadas)
+def lista_longitud_promedios(lista):
+    longitud = 0
+    contador_longitud = 0
+
+    for i in lista_contraseñas_generadas:
+
+        longitud += len(i)
+
+        contador_longitud += 1
+
+    print("promedio longitud: ", (longitud / contador_longitud))
+
+# lista_longitud_promedios(lista_contraseñas_generadas)
+
+def promedio_mayusculas(lista):
+
+    contador_mayusculas = 0
+    i = 0
+    for contraseña in lista:
+        
+        for letra in contraseña:
+         
+            if 65 <= ord(letra) and ord(letra) <= 90:
+                
+                contador_mayusculas += 1
+
+        promedio_may = contador_mayusculas / len(contraseña)
+        
+        print("contador mayusculas: ",contador_mayusculas)
+        print("Promedio mayusculas: ", promedio_may)
+
+def promedio_minusculas(lista):
+
+    contador_minusculas = 0
+
+    for contraseña in lista:
+        
+        for letra in contraseña:
+         
+            if 97 <= ord(letra) and ord(letra) <= 122:
+                
+                contador_minusculas += 1
+
+            if letra == len(contraseña)
+
+        promedio_minus = contador_minusculas / len(contraseña)
+
+        print("contador minúsculas: ",contador_minusculas)
+        print("Promedio minúsculas: ", promedio_minus)
+
+# promedio_mayusculas(lista_contraseñas_generadas)
+# promedio_minusculas(lista_contraseñas_generadas)
+
+
+
