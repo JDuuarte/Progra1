@@ -7,14 +7,14 @@ import random
 def extencion_contraseña():
 
     longitud_contraseña = random.randint(8,16)
-
+    
     contraseña = ""
     i = 1
             
     while i <= longitud_contraseña:
     
-        azar = random.randint(1,4)
-    
+        azar = random.randint(1,3)
+        
         match azar:
             case 1:
                 contraseña += chr(random.randint(65,90))

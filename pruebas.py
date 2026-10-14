@@ -11,7 +11,7 @@ def extencion_contraseña():
     while i <= longitud_contraseña:
     
         azar = random.randint(1,3)
-        print("numero random generado al azar",azar)
+
         match azar:
             case 1:
                 contraseña += chr(random.randint(65,90))
@@ -26,6 +26,8 @@ def extencion_contraseña():
                 i += 1
 
     return contraseña
+
+
 def generar_contraseña():
     cantidad_contraseña = int(input("¿Cuántas contaseñas queres generar?: "))
     Lista_vacia = []
@@ -47,47 +49,55 @@ def generar_contraseña():
             
     for j in Lista_vacia:
         print(j)
+    return Lista_vacia    
 # generar_contraseña()
-extencion_contraseña()
+# extencion_contraseña()
+
+lista_contraseñas_generadas = generar_contraseña()
+
+def lista_porcentajes(lista):
 
 
-# lista_estadisticas = ["octavios", "penelope", "lewandosky"]
+    lista2 = [0, 0, 0, 0, 0, 0, 0, 0]
 
-# ocho_caracteres = 0
-# nueve_caracteres = 0
-# diez_caracteres = 0
-# once_caracteres = 0
-# doce_caracteres = 0
-# trece_caracteres = 0
-# catorce_caracteres = 0
-# quince_caracteres = 0
+    contador_estadisticas = 0
 
-# for i in lista_estadisticas:
-#     # print(len(i))
-#     match len(i):
-#         case 8 == 8:
-#             ocho_caracteres += 1
+    for i in lista:
 
-#         case 9:
-#                     ocho_caracteres += 1
+        contador_estadisticas += 1
 
-#         case 10:
-#                     ocho_caracteres += 1
+        match len(i):
+            case 8:
+                lista2[0] += 1
 
-#         case 11:
-#                     ocho_caracteres += 1
+            case 9:
+                lista2[1] += 1
 
-#         case 12:
-#                     ocho_caracteres += 1
+            case 10:
+                lista2[2] += 1
 
-#         case 13:
-#                     ocho_caracteres += 1
+            case 11:
+                lista2[3] += 1
 
-#         case 14:
-#                     ocho_caracteres += 1
+            case 12:
+                lista2[4] += 1
 
-#         case 15:
-#                     ocho_caracteres += 1
+            case 13:
+                lista2[5] += 1
 
-#     print(ocho_caracteres)  
-#     print(diez_caracteres)              
+            case 14:
+                lista2[6] += 1
+
+            case 15:
+                lista2[7] += 1
+
+    print(lista2)
+    print("contador estadisticas", contador_estadisticas)
+
+    print("========= PORCENTAJE ========")
+    m = 8
+    for l in lista2:
+        print(f"{m} caracteres: {((l * 100)/contador_estadisticas)}%")
+        m += 1
+
+lista_porcentajes(lista_contraseñas_generadas)
