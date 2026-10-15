@@ -176,9 +176,37 @@ def promedio_numerico(lista):
     print("Promedio numérico: ", promedio_numerico)
     print("----- *** -----")
 
-promedio_mayusculas(lista_contraseñas_generadas)
-promedio_minusculas(lista_contraseñas_generadas)
-promedio_numerico(lista_contraseñas_generadas)
+# promedio_mayusculas(lista_contraseñas_generadas)
+# promedio_minusculas(lista_contraseñas_generadas)
+# promedio_numerico(lista_contraseñas_generadas)
+
+
+lista = ["perro", "gato", "conejo"]
+
+
+def contraseñas_unicas(lista):
+    contador = 0
+    comparador = ""
+    
+    for i in lista:
+
+        if i == comparador:
+            contador += 1
+            print("Contraseñas iguales, revisar algoritmo")
+            break
+
+        elif comparador == "":
+            comparador = i
+            contador += 1
+
+        else:
+            contador += 1
+
+    if contador == len(lista):        
+
+        print("contraseñas no repetidas")
+
+contraseñas_unicas(lista_contraseñas_generadas) 
 
 
 
