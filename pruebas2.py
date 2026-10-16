@@ -1,58 +1,32 @@
-def promedio_minusculas(lista):
+# lista_prueba = ("perro")
+# import funciones
 
-    contador_minusculas = 0
-    acumulador = 0
-    for contraseña in lista:
+# def agregar_contraseñas(lista):
 
-        acumulador += len(contraseña)
-        
-        for letra in contraseña:
-         
-            if 97 <= ord(letra) and ord(letra) <= 122:
-                
-                contador_minusculas += 1
+#     cantidad_contraseña = int(input("¿Cuántas contaseñas queres generar?: "))
 
-        promedio_minus = contador_minusculas / acumulador
+#     while cantidad_contraseña > 0:
 
-        
-    print("contador minúsculas: ",contador_minusculas)
-    print("Promedio minúsculas: ", promedio_minus)
+#         repetida = False
+#         password = funciones.extencion_contraseña()
+#         agregar_lista = []
 
-def promedio_mayusculas(lista):
+#         for i in agregar_lista:
+#             if i == password:
+#                 print("Contraseña existente, volviendo a generar una nueva")
+#                 repetida = True
+#                 break
 
-    contador_mayusculas = 0
-    acumulador = 0
-    for contraseña in lista:
+#         if repetida == False:
+#             agregar_lista += [password]
+#             cantidad_contraseña -= 1
+            
+#     for j in agregar_lista:
+#         print(j)
 
-        acumulador += len(contraseña)
-        
-        for letra in contraseña:
-         
-            if 65 <= ord(letra) and ord(letra) <= 90:
-                
-                contador_mayusculas += 1
+#     lista += agregar_lista
 
-        promedio_mayus = contador_mayusculas / acumulador
+#     return lista  
 
-        
-    print("contador mayúsculas: ",contador_mayusculas)
-    print("Promedio mayúsculas: ", promedio_mayus)
-
-def promedio_numerico(lista):
-
-    contador_numerico = 0
-    acumulador = 0
-    for contraseña in lista:
-
-        acumulador += len(contraseña)
-        
-        for letra in contraseña:
-         
-            if 48 <= ord(letra) and ord(letra) <= 57:
-                
-                contador_numerico += 1
-
-        promedio_numerico = contador_numerico / acumulador
-
-    print("contador numérico: ",contador_numerico)
-    print("Promedio numérico: ", promedio_numerico)
+# prueba = agregar_contraseñas(lista_prueba)
+# print(prueba)

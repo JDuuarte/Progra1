@@ -246,9 +246,3 @@ def ordenar_lista(lista):
                     lista[i] = lista[j]
                     lista[j] = aux
         print(lista)
-
-
-                
-
-print(lista_contraseñas_generadas)
-ordenar_lista(lista_contraseñas_generadas)

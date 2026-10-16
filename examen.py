@@ -1,15 +1,29 @@
-#solamente van las variables y el menu
+# import funciones
+# import random
+# #solamente van las variables y el menu
+# control = False
 
-print("Bienvenido al gestor de contraseñas\n")
+# while True:
+    
 
-print("=========== MENU ===========")
-print("1. Generar Contraseñas\n")
+#     if control == False:
+#         print("=============== **** ===============\n")
 
+#         print("Bienvenido al gestor de contraseñas.\n")
 
-opcion = input("Para continuar presieno ENTER: \n")
+#         print("=============== MENU ===============")
+#         print("1. Generar Contraseñas\n")
 
-print("... CARGANDO SISTEMA")
+#         opcion = input("Seleccione una opción: ")
+#         print()
+#         print("... CARGANDO SISTEMA\n")
+        
 
-#llamar a la funcion de generar contraseña
-
-#si esta todo ok el paso anterior, mostrar el menu completo
+        
+#         lista_guardada = funciones.generar_contraseña()
+        
+#         control = True
+    
+#     else:
+#         funciones.menu_completo()
+#         funciones.seleccionar_menu()
