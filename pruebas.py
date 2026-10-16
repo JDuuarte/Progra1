@@ -180,10 +180,6 @@ def promedio_numerico(lista):
 # promedio_minusculas(lista_contraseñas_generadas)
 # promedio_numerico(lista_contraseñas_generadas)
 
-
-lista = ["perro", "gato", "conejo"]
-
-
 def contraseñas_unicas(lista):
     contador = 0
     comparador = ""
@@ -206,7 +202,53 @@ def contraseñas_unicas(lista):
 
         print("contraseñas no repetidas")
 
-contraseñas_unicas(lista_contraseñas_generadas) 
+# contraseñas_unicas(lista_contraseñas_generadas) 
+
+# lista2 = ["perro", "gato", "cocodrilo"]
+
+def ordenar_lista(lista):
+
+    retorno = []
+        
+    print("Elegí un criterio de ordenamiento: ")
+    print("----- *** -----")
+    print("1. Asc = Ascendente")
+    print("2. Desc = Descendente")
+    opcion = input("Colocá 1(asc) o 2 (Desc): ")
+    print()
+    
+    if opcion != "1" and opcion != "2":
+        print("/" * 50)
+        print()
+        print("Opción no válida. Volve a seleccionar, por favor.")
+        print()
+        print("/" * 50)
+        
+    if opcion == "1":
+        for i in range(len(lista) - 1):
+
+            for j in range(i + 1, len(lista)):
+
+                if lista[i] > lista[j]:
+                    aux = lista[i]
+                    lista[i] = lista[j]
+                    lista[j] = aux
+        print(lista)
+    
+    elif opcion == "2":
+
+        for i in range(len(lista) - 1):
+
+            for j in range(i + 1, len(lista)):
+
+                if lista[i] < lista[j]:
+                    aux = lista[i]
+                    lista[i] = lista[j]
+                    lista[j] = aux
+        print(lista)
 
 
+                
 
+print(lista_contraseñas_generadas)
+ordenar_lista(lista_contraseñas_generadas)
